@@ -1,0 +1,39 @@
+# Core Framework - Use current versions
+langgraph>=0.6.0
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-core>=0.2.0
+
+# LLM Integration
+google-generativeai>=0.7.0
+langchain-google-genai>=1.0.0
+groq>=0.9.0
+langchain-groq>=0.1.0
+
+# Tools & APIs
+arxiv>=2.1.0
+biopython>=1.83
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# PDF Processing
+PyMuPDF>=1.24.0
+pdfplumber>=0.10.0
+
+# Text Analysis
+scikit-learn>=1.3.0
+sentence-transformers>=2.7.0
+nltk>=3.8.1
+
+# Web Framework
+fastapi>=0.104.0
+uvicorn>=0.24.0
+streamlit>=1.28.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+loguru>=0.7.0
+pyyaml>=6.0
+PyMuPDF>=1.23.0
+wikipedia>=1.4.0
