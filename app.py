@@ -81,6 +81,10 @@ if 'query_history' not in st.session_state:
     st.session_state.query_history = []
 if 'show_details' not in st.session_state:
     st.session_state.show_details = False
+if 'current_query' not in st.session_state:
+    st.session_state.current_query = ""
+if 'run_workflow' not in st.session_state:
+    st.session_state.run_workflow = False
 
 # Sidebar
 with st.sidebar:
@@ -107,6 +111,9 @@ with st.sidebar:
     for example in example_queries:
         if st.button(example, key=f"example_{example}"):
             query = example
+            st.session_state.current_query = query
+            st.session_state.workflow_results = None  # Clear previous results
+            st.session_state.run_workflow = True
             st.rerun()
     
     # Advanced options
@@ -115,7 +122,10 @@ with st.sidebar:
     
     # Run button
     if st.button("🚀 Run Research Analysis", type="primary", use_container_width=True):
+        st.session_state.current_query = query
+        st.session_state.workflow_results = None  # Clear previous results
         st.session_state.run_workflow = True
+        st.rerun()
 
 # Main content area
 st.markdown('<h1 class="main-header">Research Collaborative System</h1>', unsafe_allow_html=True)
@@ -172,7 +182,7 @@ features = [
 st.markdown("".join([f'<span class="feature-badge">{feature}</span>' for feature in features]), unsafe_allow_html=True)
 
 # Run workflow if requested
-if st.session_state.get('run_workflow', False):
+if st.session_state.run_workflow and st.session_state.current_query:
     with st.spinner("Running research analysis... This may take a few minutes."):
         # Capture logs
         log_capture = io.StringIO()
@@ -188,13 +198,13 @@ if st.session_state.get('run_workflow', False):
         
         # Run workflow
         start_time = time.time()
-        final_state = research_workflow.run(query)
+        final_state = research_workflow.run(st.session_state.current_query)
         execution_time = time.time() - start_time
         
         # Store results
         st.session_state.workflow_results = final_state
         st.session_state.query_history.append({
-            "query": query,
+            "query": st.session_state.current_query,
             "timestamp": datetime.now().isoformat(),
             "execution_time": execution_time,
             "papers_found": len(final_state.get('papers_found', [])),
@@ -203,6 +213,9 @@ if st.session_state.get('run_workflow', False):
         
         # Remove log handler
         logger.remove()
+        
+        # Reset the workflow flag
+        st.session_state.run_workflow = False
 
 # Display results if available
 if st.session_state.workflow_results:
@@ -210,6 +223,9 @@ if st.session_state.workflow_results:
     
     st.markdown("---")
     st.markdown('<div class="sub-header">Research Results</div>', unsafe_allow_html=True)
+    
+    # Display the current query
+    st.markdown(f"**Research Query:** {st.session_state.current_query}")
     
     # Summary cards
     col1, col2, col3, col4 = st.columns(4)
@@ -291,10 +307,6 @@ if st.session_state.workflow_results:
                 
                 if confidence < 0.7:
                     st.warning("Analysis confidence is below recommended threshold. Consider refining your query.")
-        
-        # Logs
-        with st.expander("📋 System Logs"):
-            st.text_area("Execution Logs", log_capture.getvalue(), height=300)
 
 # Footer
 st.markdown("---")
