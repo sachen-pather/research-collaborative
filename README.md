@@ -1,6 +1,6 @@
 # Research Collaborative System
 
-🔬 **Multi-Agent Framework for Automated Scientific Research**
+ **Multi-Agent Framework for Automated Scientific Research**
 
 A sophisticated AI-powered system that automates the entire research workflow from literature search to publication-ready reports using coordinated specialized agents.
 
@@ -15,11 +15,11 @@ The Research Collaborative System is a cutting-edge multi-agent AI framework tha
 
 ### Key Capabilities
 
-- ** Automated Literature Review**: Systematic search and analysis of scientific publications
-- ** Intelligent Analysis**: Deep theme extraction, gap identification, and contradiction detection
-- ** Hypothesis Generation**: AI-powered creation of testable research hypotheses
-- ** Data Processing**: Advanced PDF processing and quantitative analysis
-- ** Publication Support**: Professional report generation with multiple export formats
+- **Automated Literature Review**: Systematic search and analysis of scientific publications
+- **Intelligent Analysis**: Deep theme extraction, gap identification, and contradiction detection
+- **Hypothesis Generation**: AI-powered creation of testable research hypotheses
+- **Data Processing**: Advanced PDF processing and quantitative analysis
+- **Publication Support**: Professional report generation with multiple export formats
 
 ##  System Architecture
 
