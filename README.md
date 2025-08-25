@@ -11,7 +11,7 @@ A sophisticated AI-powered system that automates the entire research workflow fr
 
 ##  Overview
 
-The Research Collaborative System is a cutting-edge multi-agent AI framework that revolutionizes scientific research by automating complex research workflows through intelligent agent orchestration. Built with LangGraph and powered by multiple LLM providers, the system coordinates five specialized agents to deliver comprehensive research analysis, hypothesis generation, and publication-ready outputs.
+The Research Collaborative System is a cutting-edge multi-agent AI framework that for scientific research by automating complex research workflows through intelligent agent orchestration. Built with LangGraph and powered by multiple LLM providers, the system coordinates five specialized agents to deliver comprehensive research analysis, hypothesis generation, and publication-ready outputs.
 
 ### Key Capabilities
 
