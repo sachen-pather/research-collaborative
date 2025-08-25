@@ -44,11 +44,11 @@ graph TD
 
 | Agent | Primary Function | Key Capabilities |
 |-------|-----------------|------------------|
-| ** Literature Scanner** | Academic paper search & retrieval | ArXiv integration, metadata extraction, dynamic scaling |
-| ** Analysis Agent** | Deep literature analysis | Theme extraction, gap identification, contradiction detection |
-| ** Data Analyzer** | Document processing & quantitative analysis | PDF processing, statistical analysis, pattern recognition |
-| ** Synthesis Agent** | Research synthesis & hypothesis generation | Testable hypothesis creation, methodology design |
-| ** Publication Assistant** | Report generation & formatting | Executive summaries, research plans, export capabilities |
+| **Literature Scanner** | Academic paper search & retrieval | ArXiv integration, metadata extraction, dynamic scaling |
+| **Analysis Agent** | Deep literature analysis | Theme extraction, gap identification, contradiction detection |
+| **Data Analyzer** | Document processing & quantitative analysis | PDF processing, statistical analysis, pattern recognition |
+| **Synthesis Agent** | Research synthesis & hypothesis generation | Testable hypothesis creation, methodology design |
+| **Publication Assistant** | Report generation & formatting | Executive summaries, research plans, export capabilities |
 
 ##  Advanced Features
 
