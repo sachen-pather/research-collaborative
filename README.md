@@ -423,26 +423,6 @@ MAX_PAPERS=8  # Reduce paper limit
 - **75%** average time savings compared to manual research
 - **85%** accuracy in research gap identification
 
-## Roadmap
-
-### Short-term Enhancements (Q1 2024)
-- [ ] **PubMed Integration**: Medical literature search capabilities
-- [ ] **Citation Network Analysis**: Research relationship mapping
-- [ ] **Collaborative Features**: Multi-user research workflows
-- [ ] **API Endpoints**: RESTful API for external integration
-
-### Medium-term Goals (Q2-Q3 2024)
-- [ ] **Domain Specialization**: Field-specific analysis modules
-- [ ] **Advanced Visualizations**: Interactive research network graphs
-- [ ] **Mobile Interface**: Responsive design optimization
-- [ ] **Cloud Deployment**: Scalable cloud infrastructure
-
-### Long-term Vision (Q4 2024+)
-- [ ] **AI Research Assistant**: Conversational research support
-- [ ] **Real-time Collaboration**: Live multi-user research sessions
-- [ ] **Knowledge Graph Integration**: Semantic research understanding
-- [ ] **Predictive Analytics**: Research trend forecasting
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
